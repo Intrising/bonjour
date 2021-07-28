@@ -7,6 +7,7 @@ module.exports = function (opts) {
   var server = new Server(opts)
 
   return {
+    setText: registry.setText.bind(null, server),
     publish: registry.publish.bind(null, server),
     unpublishAll: registry.unpublishAll.bind(null, server),
     tcp: {
