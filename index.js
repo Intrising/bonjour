@@ -7,7 +7,7 @@ module.exports = function (opts) {
   var server = new Server(opts)
 
   return {
-    handleQuery: registry.handleQuery.bind(null, server),
+    handleITxPTQuery: registry._handleITxPTQuery.bind(null, server),
     setText: registry.setText.bind(null, server),
     publish: registry.publish.bind(null, server),
     unpublishAll: registry.unpublishAll.bind(null, server),
